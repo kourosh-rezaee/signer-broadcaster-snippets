@@ -2,8 +2,8 @@ import web3
 from web3 import Account
 from web3.middleware import geth_poa_middleware
 
-from .chains import GeneralSignerChains
-from .config import settings
+from app.chains import GeneralSignerChains
+from app.config import settings
 
 evm_chain = GeneralSignerChains.Ethereum
 assert evm_chain.is_evm_chain

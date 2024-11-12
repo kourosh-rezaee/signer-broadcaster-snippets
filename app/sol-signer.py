@@ -11,7 +11,7 @@ from solana.rpc.types import TxOpts
 from solders.keypair import Keypair
 from solders.transaction import VersionedTransaction
 
-from .config import settings
+from app.config import settings
 
 # Constants
 # WALLET_ADDRESS = "YOUR_WALLET_ADDRESS_PUBLIC_KEY"
