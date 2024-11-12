@@ -1,22 +1,15 @@
-from typing import Any, Dict, List, Optional, Union
-
-from pydantic import AnyHttpUrl, PostgresDsn, validator
 from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    
-    
-    
     # EMV chains
     EVM_PRIVATE_KEY_HEX: str
 
-    
-    # SOLANA    
+    # SOLANA
     SOL_PRIVATE_KEY_HEX: str
     SOLANA_MAINNET_ENDPOINT = "https://solanalb-rpc.xdefi.services/"
     SOLANA_TESTNET_ENDPOINT = "https://api.testnet.solana.com/"
-    
+
     # RPC ENDPOINTS
     ETH_MAINNET_RPC_ENDPOINT = "https://rpc.flashbots.net"
     ETH_TESTNET_RPC_ENDPOINT = "https://rpc.ankr.com/eth_rinkeby"
@@ -24,7 +17,9 @@ class Settings(BaseSettings):
     BSC_MAINNET_RPC_ENDPOINT = "https://bsc-dataseed1.binance.org/"
     BSC_TESTNET_RPC_ENDPOINT = "https://data-seed-prebsc-1-s3.binance.org:8545"
 
-    POLYGON_MAINNET_RPC_ENDPOINT = "https://polygon-rpc.com"  # "https://polygon-rpc.com"
+    POLYGON_MAINNET_RPC_ENDPOINT = (
+        "https://polygon-rpc.com"  # "https://polygon-rpc.com"
+    )
     POLYGON_TESTNET_RPC_ENDPOINT = "https://rpc.ankr.com/polygon_mumbai"
 
     FANTOM_MAINNET_RPC_ENDPOINT = "https://rpc.ftm.tools"
@@ -52,8 +47,6 @@ class Settings(BaseSettings):
     NEAR_MAINNET_ARCHIVAL_ENDPOINT = "https://archival-rpc.mainnet.near.org"
     NEAR_TESTNET_ENDPOINT = "https://rpc.testnet.near.org"
     NEAR_TESTNET_ARCHIVAL_ENDPOINT = "https://archival-rpc.testnet.near.org"
-
-
 
     OSMOSIS_MAINNET_BACKUP_ENDPOINT = "https://osmosis-mainnet-rpc.allthatnode.com:1317"
     OSMOSIS_MAINNET_ENDPOINT = "https://rpc-proxy.xdefi.services/osmosis/lcd/mainnet"
@@ -107,11 +100,9 @@ class Settings(BaseSettings):
 
     BSC_MAINNET_WS_ENDPOINT = "wss://bsc-ws-node.nariox.org:443"
 
-
-    
     class Config:
         case_sensitive = True
-        env_file_encoding = 'utf-8'
+        env_file_encoding = "utf-8"
         env_file = ".env"
 
 
