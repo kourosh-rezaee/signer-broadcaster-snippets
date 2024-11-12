@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "signer-broadcaster-snippets"
+version = "0.1.0"
+description = "A collection of different chains signer and broadcasters"
+authors = ["kourosh <kourosh@xdefi.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+# chains utils
+solders = "^0.21.0"
+solana = "^0.35.1"
+web3 = "^5.25.0"
+eth-account = "0.5.9"
+bech32 = "^1.2.0"
+cosmpy = "^0.6.2"
+
+# validation
+pydantic = {extras = ["dotenv"], version = "^2.6.1"}
+pydantic-settings = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
