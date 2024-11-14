@@ -1,6 +1,5 @@
 from bitcoinlib.keys import HDKey
 from bitcoinlib.transactions import Transaction
-
 from app.config import settings
 
 hd_key = HDKey(settings.BTC_PRIVATE_KEY_HEX)
