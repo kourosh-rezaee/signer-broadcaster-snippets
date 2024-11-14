@@ -6,6 +6,7 @@ from .config import settings
 
 class GeneralSignerChainType(enum.Enum):
     EVMBased = "EVMBased"
+    UTXO = "UTXO"
     SOLANA = "Solana"
     Other = "Other"
 
@@ -130,6 +131,18 @@ class GeneralSignerChains(enum.Enum):
         chain_id=900,
         gql_graph_name="solana",
         chain_type=GeneralSignerChainType.SOLANA,
+        rpc_endpoint=settings.SOLANA_MAINNET_ENDPOINT,
+    )
+
+    # Solana chain
+    Bitcoin = Chain(
+        name="solana",
+        native_asset="SOL",
+        crypto_asset="solana",
+        decimal=9,
+        chain_id=900,
+        gql_graph_name="solana",
+        chain_type=GeneralSignerChainType.B,
         rpc_endpoint=settings.SOLANA_MAINNET_ENDPOINT,
     )
 

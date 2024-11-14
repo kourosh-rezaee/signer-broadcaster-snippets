@@ -4,6 +4,10 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     # EMV chains
     EVM_PRIVATE_KEY_HEX: str
+    
+    # UTXO chains
+    BTC_PRIVATE_KEY_HEX: str
+    BTC_EXPECTED_ADDRESS: str
 
     # SOLANA
     SOL_PRIVATE_KEY_HEX: str

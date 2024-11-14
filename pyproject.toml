@@ -19,6 +19,9 @@ cosmpy = "^0.6.2"
 # validation
 pydantic = {extras = ["dotenv"], version = "^2.6.1"}
 pydantic-settings = "^2.1.0"
+bit = "^0.8.0"
+gmpy = "^1.17"
+bitcoinlib = "^0.7.0"
 
 
 [build-system]
