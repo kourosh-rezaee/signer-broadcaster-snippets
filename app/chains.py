@@ -136,14 +136,14 @@ class GeneralSignerChains(enum.Enum):
 
     # Solana chain
     Bitcoin = Chain(
-        name="solana",
+        name="Bitcoin",
         native_asset="SOL",
-        crypto_asset="solana",
+        crypto_asset="BTC",
         decimal=9,
         chain_id=900,
-        gql_graph_name="solana",
-        chain_type=GeneralSignerChainType.B,
-        rpc_endpoint=settings.SOLANA_MAINNET_ENDPOINT,
+        gql_graph_name="bitcoin",
+        chain_type=GeneralSignerChainType.UTXO,
+        rpc_endpoint=settings.BASE_RPC_ENDPOINT,
     )
 
     @classmethod
