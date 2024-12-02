@@ -44,6 +44,7 @@ signed_txn = VersionedTransaction.populate(raw_transaction.message, [signature])
 
 # Send the signed transaction
 opts = TxOpts(skip_preflight=False, preflight_commitment=Processed)
+# simulation_result = client.send_raw_transaction(signed_txn)
 result = client.send_raw_transaction(txn=bytes(signed_txn), opts=opts)
 
 # Extract and print the transaction ID

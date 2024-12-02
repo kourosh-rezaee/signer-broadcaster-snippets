@@ -197,8 +197,10 @@ class GeneralSignerChains(enum.Enum):
 
     @property
     def chain_id(self) -> Optional[Union[str, int]]:
-        return self.value.chain_id
-
+        if isinstance(self.value.chain_id, int):
+            return self.value.chain_id
+        if isinstance(self.value.chain_id, tuple):
+            return self.value.chain_id[0]
     @property
     def crypto_asset(self) -> Optional[str]:
         return self.value.crypto_asset
