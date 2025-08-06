@@ -27,6 +27,8 @@ class Settings(BaseSettings):
     FANTOM_MAINNET_RPC_ENDPOINT: str = "https://rpc.ftm.tools"
     FANTOM_TESTNET_RPC_ENDPOINT: str = "https://rpc.ankr.com/fantom_testnet"
 
+    CELO_MAINNET_RPC_ENDPOINT: str = "https://forno.celo.org"
+
     AVALANCHE_MAINNET_RPC_ENDPOINT: str = "https://api.avax.network/ext/bc/C/rpc"
     AVALANCHE_TESTNET_RPC_ENDPOINT: str = "https://api.avax-test.network/ext/bc/C/rpc"
 
@@ -107,6 +109,9 @@ class Settings(BaseSettings):
     # WS ENDPOINTS
     ETH_MAINNET_WS_ENDPOINT: str = "wss://main-light.eth.linkpool.io/ws"
     ETH_TESTNET_WS_ENDPOINT: str = "wss://rinkeby-light.eth.linkpool.io/ws"
+    
+    BERACHAIN_MAINNET_RPC_ENDPOINT: str = "https://rpc.berachain.com/"
+    
 
     BSC_MAINNET_WS_ENDPOINT: str = "wss://bsc-ws-node.nariox.org:443"
 

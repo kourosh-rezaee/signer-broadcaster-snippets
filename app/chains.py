@@ -35,6 +35,16 @@ class GeneralSignerChains(enum.Enum):
         chain_type=GeneralSignerChainType.EVMBased,
         rpc_endpoint=settings.ETH_MAINNET_RPC_ENDPOINT,
     )
+    BeraChain = Chain(
+        name="berachain",
+        native_asset="BERA",
+        crypto_asset="berachain",
+        decimal=18,
+        chain_id=80094,
+        gql_graph_name="BeraChain",
+        chain_type=GeneralSignerChainType.EVMBased,
+        rpc_endpoint=settings.BERACHAIN_MAINNET_RPC_ENDPOINT,
+    )
     Polygon = Chain(
         name="polygon",
         native_asset="MATIC",
@@ -145,6 +155,15 @@ class GeneralSignerChains(enum.Enum):
         chain_type=GeneralSignerChainType.UTXO,
         rpc_endpoint=settings.BASE_RPC_ENDPOINT,
     )
+    Celo = Chain(
+        name="celo",
+        native_asset="CELO",
+        crypto_asset="celo",
+        decimal=18,
+        chain_id=42220,
+        gql_graph_name="Celo",
+        chain_type=GeneralSignerChainType.EVMBased,
+        rpc_endpoint=settings.CELO_MAINNET_RPC_ENDPOINT,)
 
     @classmethod
     def chain_name_migration_middle_step(cls, name: str) -> Optional[str]:

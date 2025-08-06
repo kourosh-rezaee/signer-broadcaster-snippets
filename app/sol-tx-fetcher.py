@@ -34,12 +34,12 @@ def get_b58_tx(tx_sig_str: str):
     return res.json().get("result").get("transaction")[0]
 
 
-def get_b64_sol_tx_from_sig(tx_sig_str: str):
-    tx_sig = Signature.from_string(tx_sig_str)
-    tx_resp = client.get_transaction(tx_sig, max_supported_transaction_version=0)
-    transaction = tx_resp.value.transaction.transaction
-    sol_tx = txlib.Transaction.from_solders(transaction)
-    return base64.b64encode(sol_tx.serialize(verify_signatures=False))
+# def get_b64_sol_tx_from_sig(tx_sig_str: str):
+#     tx_sig = Signature.from_string(tx_sig_str)
+#     tx_resp = client.get_transaction(tx_sig, max_supported_transaction_version=0)
+#     transaction = tx_resp.value.transaction.transaction
+#     sol_tx = txlib.Transaction.from_solders(transaction)
+#     return base64.b64encode(sol_tx.serialize(verify_signatures=False))
 
 
 
